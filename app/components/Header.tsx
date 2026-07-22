@@ -97,6 +97,7 @@ const Header = () => {
                   src="/dp/me.jpeg"
                   alt="Prashant Pandey"
                   fill
+                  sizes="(max-width: 768px) 224px, 288px"
                   className="object-cover"
                   onError={() => setImgError(true)}
                   priority

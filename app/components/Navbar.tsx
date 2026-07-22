@@ -33,32 +33,41 @@ const Navbar = () => {
 
   const isDark = mode === "dark";
 
-  const navBg = scrolled
-    ? isDark
-      ? "bg-black/80 backdrop-blur-md border-b border-zinc-800"
-      : "bg-white/90 backdrop-blur-md border-b border-zinc-200"
-    : "bg-transparent";
-
-  const textColor = isDark ? "text-zinc-300" : "text-zinc-700";
-  const logoColor = isDark ? "text-white" : "text-zinc-900";
-
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${navBg}`}>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isDark
+          ? scrolled
+            ? "bg-black/90 border-b border-zinc-800 backdrop-blur-md"
+            : "bg-black/60 backdrop-blur-sm"
+          : scrolled
+          ? "bg-white/90 border-b border-zinc-200 backdrop-blur-md"
+          : "bg-white/60 backdrop-blur-sm"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-
           {/* Logo */}
-          <a href="#home" className={`text-base font-medium tracking-tight ${logoColor}`}>
-            Prashant.
+          <a
+            href="#home"
+            className={`text-lg font-bold tracking-tight ${
+              isDark ? "text-white" : "text-zinc-900"
+            }`}
+          >
+            Prashant<span className="text-indigo-500">.</span>
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.title}
                 href={item.href}
-                className={`text-sm underline-hover transition-colors ${textColor} hover:${isDark ? "text-white" : "text-zinc-900"}`}
+                className={`text-sm font-semibold transition-all px-2 py-1 rounded-md ${
+                  isDark
+                    ? "text-zinc-100 hover:text-white hover:bg-zinc-800/60"
+                    : "text-zinc-800 hover:text-black hover:bg-zinc-100"
+                }`}
               >
                 {item.title}
               </a>
@@ -69,19 +78,21 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <a
               href="mailto:prashantpandey3103@gmail.com"
-              className={`hidden md:flex items-center gap-1 text-sm font-medium px-4 py-1.5 rounded-full border transition-all ${isDark
-                  ? "border-zinc-700 text-zinc-300 hover:border-zinc-400 hover:text-white"
-                  : "border-zinc-300 text-zinc-600 hover:border-zinc-500 hover:text-zinc-900"
-                }`}
+              className={`hidden md:flex items-center gap-1 text-xs font-semibold px-3.5 py-1.5 rounded-full border transition-all ${
+                isDark
+                  ? "border-zinc-700 text-white bg-zinc-900 hover:bg-zinc-800 hover:border-zinc-500"
+                  : "border-zinc-300 text-zinc-800 bg-zinc-50 hover:bg-zinc-100 hover:border-zinc-400"
+              }`}
             >
-              Hire Me <MdArrowOutward size={14} />
+              Hire Me <MdArrowOutward size={13} />
             </a>
             <button
               onClick={() => Setmode(isDark ? "light" : "dark")}
-              className={`p-2 rounded-full transition-all ${isDark
-                  ? "text-zinc-400 hover:text-white"
-                  : "text-zinc-500 hover:text-zinc-900"
-                }`}
+              className={`p-2 rounded-full transition-all ${
+                isDark
+                  ? "text-zinc-200 hover:text-white hover:bg-zinc-800"
+                  : "text-zinc-700 hover:text-black hover:bg-zinc-100"
+              }`}
               aria-label="Toggle theme"
             >
               {isDark ? <MdLightMode size={18} /> : <MdDarkMode size={18} />}
@@ -89,11 +100,13 @@ const Navbar = () => {
 
             {/* Mobile Toggle */}
             <button
-              className={`md:hidden p-1 ${textColor}`}
+              className={`md:hidden p-1.5 rounded-md ${
+                isDark ? "text-white" : "text-zinc-900"
+              }`}
               onClick={() => setSideOpen(!sideOpen)}
               aria-label="Toggle menu"
             >
-              {sideOpen ? <RxCross2 size={20} /> : <RxHamburgerMenu size={20} />}
+              {sideOpen ? <RxCross2 size={22} /> : <RxHamburgerMenu size={22} />}
             </button>
           </div>
         </div>
@@ -102,17 +115,20 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {sideOpen && (
         <div
-          className={`md:hidden px-6 py-5 flex flex-col gap-5 ${isDark
-              ? "bg-black border-t border-zinc-800"
-              : "bg-white border-t border-zinc-200"
-            }`}
+          className={`md:hidden px-6 py-5 flex flex-col gap-4 border-t ${
+            isDark
+              ? "bg-black border-zinc-800"
+              : "bg-white border-zinc-200"
+          }`}
         >
           {navItems.map((item) => (
             <a
               key={item.title}
               href={item.href}
               onClick={() => setSideOpen(false)}
-              className={`text-sm transition-colors ${textColor}`}
+              className={`text-sm font-semibold transition-colors py-1 ${
+                isDark ? "text-zinc-200 hover:text-white" : "text-zinc-800 hover:text-black"
+              }`}
             >
               {item.title}
             </a>

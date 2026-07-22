@@ -107,6 +107,7 @@ const Projects = () => {
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 800px"
                   className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
                 />
                 {/* Overlay gradient at bottom */}
