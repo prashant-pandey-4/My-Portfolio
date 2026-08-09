@@ -12,6 +12,7 @@ interface Project {
   live: string;
   image?: string;
   featured?: boolean;
+  status?: string;
   tech: { name: string }[];
 }
 
@@ -35,10 +36,45 @@ const projects: Project[] = [
     ],
   },
   {
+    title: "MovieHub — Discovery & Watchlist Platform",
+    about:
+      "Modern web app for discovering trending movies, searching titles, exploring detailed movie metrics, and managing a personal watchlist with dynamic UI elements.",
+    date: "July 2025",
+    code: "https://github.com/prashant-pandey-4",
+    live: "https://movie-hub-phi-virid.vercel.app/",
+    image: "/movie-hub-screenshot.png",
+    featured: true,
+    tech: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "TMDB API" },
+    ],
+  },
+  {
+    title: "IronPeak — Gym & Fitness Landing Page",
+    about:
+      "High-performance fitness & gym landing page built with modern UI design, featuring membership plans, trainer profiles, training programs, and smooth responsive layouts.",
+    date: "August 2025",
+    code: "https://github.com/prashant-pandey-4",
+    live: "https://ironpeak-gym-landing-page.vercel.app/",
+    image: "/gym-fitness-landingPage.png",
+    featured: true,
+    tech: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Framer Motion" },
+    ],
+  },
+  {
     title: "AI-Powered Learning Management System",
     about:
       "Full-featured LMS with AI-powered course recommendations, real-time video lectures, JWT auth, RBAC (admin/instructor/student), Razorpay payment integration, and Cloudinary for media storage.",
-    date: "June 2025",
+    date: "Currently Working",
+    status: "In Development",
     code: "https://github.com/prashant-pandey-4",
     live: "#",
     tech: [
@@ -51,7 +87,6 @@ const projects: Project[] = [
       { name: "Cloudinary" },
     ],
   },
-
 ];
 
 const Projects = () => {
@@ -199,7 +234,7 @@ const Projects = () => {
                 >
                   <FaGithub size={11} /> Code
                 </a>
-                {project.live !== "#" && (
+                {project.live !== "#" ? (
                   <a
                     href={project.live}
                     target="_blank"
@@ -208,6 +243,11 @@ const Projects = () => {
                   >
                     <FaExternalLinkAlt size={10} /> Live
                   </a>
+                ) : (
+                  <span className="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                    {project.status || "In Development"}
+                  </span>
                 )}
               </div>
             </div>
