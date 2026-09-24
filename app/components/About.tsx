@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { User2 } from "lucide-react";
 
 const stats = [
-  { value: "2+", label: "Years of coding" },
+  { value: "3+", label: "Years of coding" },
   { value: "10+", label: "Projects built" },
   { value: "5+", label: "Tech stacks" },
   { value: "1", label: "Internship" },
