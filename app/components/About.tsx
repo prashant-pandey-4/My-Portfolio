@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "../Theme";
-import { FaCode, FaServer, FaDatabase, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { User2 } from "lucide-react";
 
@@ -9,24 +9,6 @@ const stats = [
   { value: "10+", label: "Projects built" },
   { value: "5+", label: "Tech stacks" },
   { value: "1", label: "Internship" },
-];
-
-const interests = [
-  {
-    icon: FaCode,
-    title: "Frontend",
-    desc: "Building pixel-perfect UIs with React & Next.js. I care deeply about UX, performance, and accessibility.",
-  },
-  {
-    icon: FaServer,
-    title: "Backend",
-    desc: "Designing RESTful APIs and real-time systems with Node.js, Express, and FastAPI.",
-  },
-  {
-    icon: FaDatabase,
-    title: "Database",
-    desc: "Structuring data with MongoDB and PostgreSQL. Experience with Prisma ORM and complex queries.",
-  },
 ];
 
 const AboutSection = () => {
@@ -60,28 +42,15 @@ const AboutSection = () => {
           {/* Left — Bio */}
           <div className="lg:col-span-3 flex flex-col gap-6">
             <p className={`text-sm leading-7 ${subText}`}>
-              I&apos;m <span className={`font-medium ${text}`}>Prashant Pandey</span>, a 22-year-old
-              Full-Stack Developer with a strong understanding of designing and building
-              production-ready web applications. I enjoy building end-to-end solutions — from
-              designing intuitive UIs to engineering robust, scalable backends.
+              I&apos;m <span className={`font-medium ${text}`}>Prashant Pandey</span>, a Full-Stack
+              Developer who builds production-ready web apps end-to-end — from intuitive UIs to
+              scalable backends. I interned at{" "}
+              <span className={`font-medium ${text}`}>Dollop Infotech</span> and have freelanced
+              across the full dev lifecycle: requirements, architecture, deployment, and support.
             </p>
             <p className={`text-sm leading-7 ${subText}`}>
-              I&apos;ve worked as a Full-Stack Developer Intern at{" "}
-              <span className={`font-medium ${text}`}>Dollop Infotech</span>, where I built
-              production-grade applications using Next.js, Node.js, and MongoDB. Alongside that,
-              I&apos;ve freelanced on multiple client projects, sharpening my skills across the
-              full development lifecycle — requirements, architecture, deployment, and support.
-            </p>
-            <p className={`text-sm leading-7 ${subText}`}>
-              I&apos;m passionate about creating scalable, maintainable, and user-focused software,
-              with a deep understanding of application architecture and real-world development
-              practices. I enjoy solving complex problems by focusing on clean system design rather
-              than just writing code.
-            </p>
-            <p className={`text-sm leading-7 ${subText}`}>
-              Currently exploring the AI ecosystem — including Generative AI, AI agents, and modern
-              AI application frameworks — with the goal of building intelligent, AI-powered web
-              applications that deliver practical, real-world value.
+              Currently exploring Generative AI and AI agents to build intelligent, AI-powered
+              applications that deliver real-world value.
             </p>
 
             <div className="flex gap-3 mt-2">
@@ -123,22 +92,7 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Interests / Focus areas */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {interests.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.title}
-                className={`rounded-xl border p-5 ${cardBg} ${border}`}
-              >
-                <Icon size={18} className={`mb-3 ${isDark ? "text-zinc-400" : "text-zinc-500"}`} />
-                <h3 className={`text-sm font-medium mb-2 ${text}`}>{item.title}</h3>
-                <p className={`text-xs leading-relaxed ${subText}`}>{item.desc}</p>
-              </div>
-            );
-          })}
-        </div>
+
       </div>
     </section>
   );

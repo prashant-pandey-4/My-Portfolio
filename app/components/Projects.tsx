@@ -18,6 +18,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "AI-Powered Learning Management System",
+    about:
+      "SkillUP is a full-stack LMS with a Gemini AI chatbot mentor, multi-quality video streaming via Cloudinary, YouTube playlist auto-import, student & admin dashboards, and Clerk-based auth.",
+    date: "September 2026",
+    code: "https://github.com/prashant-pandey-4/Ai-powered-lms",
+    live: "https://skillup-ailms.vercel.app/",
+    image: "/Ai-Lms.png",
+    featured: true,
+    tech: [
+      { name: "Next.js" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" },
+      { name: "Clerk Auth" },
+      { name: "Cloudinary" },
+    ],
+  },
+  {
     title: "Full-Stack Job Portal Platform",
     about:
       "Job portal connecting employers and job seekers with job listings, applicant tracking, resume uploads, recruiter & seeker dashboards, real-time notifications, and advanced search filters.",
@@ -69,24 +87,7 @@ const projects: Project[] = [
       { name: "Framer Motion" },
     ],
   },
-  {
-    title: "AI-Powered Learning Management System",
-    about:
-      "Full-featured LMS with AI-powered course recommendations, real-time video lectures, JWT auth, RBAC (admin/instructor/student), Razorpay payment integration, and Cloudinary for media storage.",
-    date: "Currently Working",
-    status: "In Development",
-    code: "https://github.com/prashant-pandey-4",
-    live: "#",
-    tech: [
-      { name: "React.js" },
-      { name: "Node.js" },
-      { name: "Express.js" },
-      { name: "MongoDB" },
-      { name: "JWT" },
-      { name: "Razorpay" },
-      { name: "Cloudinary" },
-    ],
-  },
+
 ];
 
 const Projects = () => {
