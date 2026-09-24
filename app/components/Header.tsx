@@ -94,7 +94,7 @@ const Header = () => {
             <div className={`relative w-56 h-56 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border ${isDark ? "border-zinc-800" : "border-zinc-200"}`}>
               {!imgError ? (
                 <Image
-                  src="/dp/me.jpeg"
+                  src="/dp/me.jpg"
                   alt="Prashant Pandey"
                   fill
                   sizes="(max-width: 768px) 224px, 288px"
