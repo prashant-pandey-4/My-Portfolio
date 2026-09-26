@@ -18,9 +18,8 @@ const Header = () => {
   return (
     <section
       id="home"
-      className={`min-h-screen flex items-center ${
-        isDark ? "bg-black" : "bg-white"
-      }`}
+      className={`min-h-screen flex items-center ${isDark ? "bg-black" : "bg-white"
+        }`}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-28 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
@@ -46,23 +45,21 @@ const Header = () => {
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
               <a
                 href="#contact"
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${
-                  isDark
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${isDark
                     ? "border-zinc-600 text-zinc-200 hover:border-white hover:text-white"
                     : "border-zinc-300 text-zinc-700 hover:border-zinc-600 hover:text-zinc-900"
-                }`}
+                  }`}
               >
                 Get in touch <MdArrowOutward size={16} />
               </a>
               <a
-                href="/My_resume.pdf"
+                href="/Prashant_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
-                  isDark
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${isDark
                     ? "bg-white text-black hover:bg-zinc-200"
                     : "bg-zinc-900 text-white hover:bg-zinc-700"
-                }`}
+                  }`}
               >
                 Resume <HiDownload size={16} />
               </a>
@@ -91,14 +88,14 @@ const Header = () => {
 
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <div className={`relative w-56 h-56 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border ${isDark ? "border-zinc-800" : "border-zinc-200"}`}>
+            <div className={`relative w-64 sm:w-72 md:w-80 aspect-[4/5] rounded-2xl overflow-hidden border shadow-lg ${isDark ? "border-zinc-800 shadow-black/40" : "border-zinc-200 shadow-zinc-200/50"}`}>
               {!imgError ? (
                 <Image
-                  src="/dp/me.jpg"
+                  src="/dp/me.jpeg"
                   alt="Prashant Pandey"
                   fill
-                  sizes="(max-width: 768px) 224px, 288px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 256px, 320px"
+                  className="object-cover object-top"
                   onError={() => setImgError(true)}
                   priority
                 />
@@ -107,7 +104,7 @@ const Header = () => {
                   <span className={`text-5xl font-light ${isDark ? "text-zinc-500" : "text-zinc-300"}`}>PP</span>
                   <p className={`text-xs mt-3 text-center px-4 ${isDark ? "text-zinc-600" : "text-zinc-400"}`}>
                     Add photo to<br />
-                    <code className="text-xs">public/dp/profile.png</code>
+                    <code className="text-xs">public/dp/me.jpeg</code>
                   </p>
                 </div>
               )}
