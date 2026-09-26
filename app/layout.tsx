@@ -9,7 +9,7 @@ const outfit = Outfit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://prashant-pandey.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://prashant-portfolio-p.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
