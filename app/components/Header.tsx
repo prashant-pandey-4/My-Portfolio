@@ -26,19 +26,19 @@ const Header = () => {
 
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
-            <p className={`text-sm font-light mb-5 ${mutedText}`}>
-              Based in India
+            <p className={`text-sm font-light mb-4 flex items-center justify-center lg:justify-start gap-2 ${mutedText}`}>
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Available for work
             </p>
-            <p className={`text-3xl sm:text-4xl mb-1 font-light ${text}`}>
+            <h1 className={`text-3xl sm:text-4xl lg:text-5xl mb-2 font-light tracking-tight ${text}`}>
               Hi, I&apos;m Prashant Pandey
-            </p>
-            <p className={`font-light text-lg mb-6 ${subText}`}>
-              22 | Full-Stack Developer
-            </p>
+            </h1>
+            <h2 className={`font-light text-lg sm:text-xl mb-6 ${subText}`}>
+              Full-Stack Web Developer &amp; Software Engineer
+            </h2>
             <p className={`text-sm leading-relaxed max-w-md mx-auto lg:mx-0 mb-8 ${subText}`}>
-              I build full-stack web applications with clean code and intuitive
-              design. Passionate about scalable backend systems, modern frontend
-              experiences, and open source.
+              I build scalable full-stack web applications with clean architecture and intuitive UI.
+              Specializing in Next.js, React, Node.js, and modern AI integrations. Open for freelance projects, full-time roles &amp; remote contracts.
             </p>
 
             {/* Buttons */}
@@ -46,8 +46,8 @@ const Header = () => {
               <a
                 href="#contact"
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${isDark
-                    ? "border-zinc-600 text-zinc-200 hover:border-white hover:text-white"
-                    : "border-zinc-300 text-zinc-700 hover:border-zinc-600 hover:text-zinc-900"
+                  ? "border-zinc-600 text-zinc-200 hover:border-white hover:text-white"
+                  : "border-zinc-300 text-zinc-700 hover:border-zinc-600 hover:text-zinc-900"
                   }`}
               >
                 Get in touch <MdArrowOutward size={16} />
@@ -57,8 +57,8 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all ${isDark
-                    ? "bg-white text-black hover:bg-zinc-200"
-                    : "bg-zinc-900 text-white hover:bg-zinc-700"
+                  ? "bg-white text-black hover:bg-zinc-200"
+                  : "bg-zinc-900 text-white hover:bg-zinc-700"
                   }`}
               >
                 Resume <HiDownload size={16} />

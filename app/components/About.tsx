@@ -43,14 +43,15 @@ const AboutSection = () => {
           <div className="lg:col-span-3 flex flex-col gap-6">
             <p className={`text-sm leading-7 ${subText}`}>
               I&apos;m <span className={`font-medium ${text}`}>Prashant Pandey</span>, a Full-Stack
-              Developer who builds production-ready web apps end-to-end — from intuitive UIs to
-              scalable backends. I interned at{" "}
-              <span className={`font-medium ${text}`}>Dollop Infotech</span> and have freelanced
-              across the full dev lifecycle: requirements, architecture, deployment, and support.
+              Web Developer based in <span className={`font-medium ${text}`}>Rewa &amp; Indore, Madhya Pradesh, India</span>. 
+              I build production-ready web applications end-to-end — from intuitive, fast-loading UIs to
+              scalable, secure backends. I interned at{" "}
+              <span className={`font-medium ${text}`}>Dollop Infotech (Indore)</span> and have worked as a
+              freelance full-stack developer across the entire lifecycle: client requirements, architecture, deployment, and optimization.
             </p>
             <p className={`text-sm leading-7 ${subText}`}>
-              Currently exploring Generative AI and AI agents to build intelligent, AI-powered
-              applications that deliver real-world value.
+              Currently exploring Generative AI and AI agents to build intelligent, modern web
+              applications. Available for full-time engineering roles, remote opportunities, and freelance client projects.
             </p>
 
             <div className="flex gap-3 mt-2">
