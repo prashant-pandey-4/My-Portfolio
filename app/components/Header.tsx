@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex-1 text-center lg:text-left">
             <p className={`text-sm font-light mb-4 flex items-center justify-center lg:justify-start gap-2 ${mutedText}`}>
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Available for work
+              Available for work • Based in India
             </p>
             <h1 className={`text-3xl sm:text-4xl lg:text-5xl mb-2 font-light tracking-tight ${text}`}>
               Hi, I&apos;m Prashant Pandey

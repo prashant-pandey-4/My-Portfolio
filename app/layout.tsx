@@ -14,38 +14,39 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://prashant-portfolio-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Prashant Pandey | Full-Stack Web Developer in Rewa & Indore, India",
+    default: "Prashant Pandey | Full-Stack Web Developer & Software Engineer, India",
     template: "%s | Prashant Pandey",
   },
   description:
-    "Prashant Pandey is a Full-Stack Web Developer & Software Engineer based in Rewa & Indore, Madhya Pradesh, India. Specializing in Next.js, React, Node.js, TypeScript, PostgreSQL, and modern web applications.",
+    "Prashant Pandey — Full-Stack Web Developer & Software Engineer from India. Specializing in Next.js, React, Node.js, TypeScript, PostgreSQL, MongoDB, and AI-powered web applications. Open for freelance, remote, and full-time opportunities.",
   keywords: [
-    // Local SEO (Rewa, MP, Indore)
-    "Full Stack Developer in Rewa",
-    "Web Developer in Rewa",
-    "Web Developer Rewa Madhya Pradesh",
-    "Full Stack Developer Rewa Madhya Pradesh",
-    "Software Engineer Rewa",
-    "Freelance Web Developer Rewa",
-    "Web Developer in Indore",
-    "Full Stack Developer Indore",
-    "Software Developer Madhya Pradesh",
-    "Full Stack Developer India",
-    
-    // Core Identity & Skills
+    // Brand / Name (highest priority)
     "Prashant Pandey",
-    "Prashant Pandey Developer",
     "Prashant Pandey Portfolio",
+    "Prashant Pandey Developer",
+    "Prashant Pandey Full Stack Developer",
+    "Prashant Pandey Software Engineer",
+    "Prashant Pandey Web Developer",
+
+    // Core Skills
     "Full-Stack Developer",
+    "Full Stack Web Developer",
     "Next.js Developer",
     "React.js Developer",
     "Node.js Developer",
     "TypeScript Developer",
     "MERN Stack Developer",
-    "Dollop Infotech Intern",
-    "AI Web Developer",
     "Frontend Developer",
     "Backend Developer",
+    "AI Web Developer",
+    "Freelance Web Developer India",
+
+    // Location (secondary)
+    "Full Stack Developer India",
+    "Web Developer India",
+    "Software Developer Madhya Pradesh",
+    "Web Developer Indore",
+    "Full Stack Developer Indore",
   ],
   authors: [{ name: "Prashant Pandey", url: siteUrl }],
   creator: "Prashant Pandey",
@@ -58,9 +59,9 @@ export const metadata: Metadata = {
     type: "profile",
     locale: "en_IN",
     url: siteUrl,
-    title: "Prashant Pandey | Full-Stack Web Developer in Rewa & Indore, India",
+    title: "Prashant Pandey | Full-Stack Web Developer & Software Engineer, India",
     description:
-      "Full-Stack Web Developer specializing in Next.js, React, Node.js, and TypeScript. Based in Rewa & Indore, Madhya Pradesh, India. Open for freelance and full-time roles.",
+      "Prashant Pandey — Full-Stack Web Developer specializing in Next.js, React, Node.js, and TypeScript. Based in India. Open for freelance, remote, and full-time roles.",
     siteName: "Prashant Pandey Portfolio",
     images: [
       {
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prashant Pandey | Full-Stack Web Developer",
     description:
-      "Full-Stack Developer specializing in Next.js, React, Node.js, TypeScript. Based in Rewa & Indore, Madhya Pradesh, India.",
+      "Prashant Pandey — Full-Stack Developer specializing in Next.js, React, Node.js, TypeScript. Based in India. Open for work.",
     images: ["/dp/me.jpeg"],
   },
   robots: {
@@ -169,7 +170,7 @@ const jsonLd = {
       url: siteUrl,
       name: "Prashant Pandey | Full-Stack Web Developer Portfolio",
       description:
-        "Portfolio of Prashant Pandey, Full-Stack Web Developer based in Rewa & Indore, Madhya Pradesh, India.",
+        "Portfolio of Prashant Pandey, Full-Stack Web Developer & Software Engineer based in India.",
       publisher: {
         "@id": `${siteUrl}/#person`,
       },

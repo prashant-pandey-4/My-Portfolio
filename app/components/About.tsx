@@ -43,10 +43,10 @@ const AboutSection = () => {
           <div className="lg:col-span-3 flex flex-col gap-6">
             <p className={`text-sm leading-7 ${subText}`}>
               I&apos;m <span className={`font-medium ${text}`}>Prashant Pandey</span>, a Full-Stack
-              Web Developer based in <span className={`font-medium ${text}`}>Rewa &amp; Indore, Madhya Pradesh, India</span>. 
+              Web Developer based in <span className={`font-medium ${text}`}>India</span>. 
               I build production-ready web applications end-to-end — from intuitive, fast-loading UIs to
               scalable, secure backends. I interned at{" "}
-              <span className={`font-medium ${text}`}>Dollop Infotech (Indore)</span> and have worked as a
+              <span className={`font-medium ${text}`}>Dollop Infotech</span> and have worked as a
               freelance full-stack developer across the entire lifecycle: client requirements, architecture, deployment, and optimization.
             </p>
             <p className={`text-sm leading-7 ${subText}`}>
